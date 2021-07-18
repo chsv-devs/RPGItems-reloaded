@@ -36,8 +36,8 @@ public class Update01To02 implements Updater {
             for (String key : iSection.getKeys(false)) {
                 ConfigurationSection item = iSection.getConfigurationSection(key);
                 if (item.contains("armour")) {
-                    int dam = item.getInt("armour");
-                    item.set("armour", (int) ((((double) dam) / 20d) * 100d));
+                    double dam = item.getDouble("armour");
+                    item.set("armour", (dam / 20d) * 100d);
                 }
             }
         }

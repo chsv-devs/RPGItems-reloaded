@@ -114,7 +114,7 @@ public class Update04To05 implements Updater {
                     Quality quality = Quality.valueOf(s.getString("quality"));
                     int damageMin = s.getInt("damageMin");
                     int damageMax = s.getInt("damageMax");
-                    int armour = s.getInt("armour", 0);
+                    double armour = s.getDouble("armour", 0);
                     ItemStack item = new ItemStack(Material.valueOf(s.getString("item")));
                     ItemMeta meta = item.getItemMeta();
                     if (meta instanceof LeatherArmorMeta) {

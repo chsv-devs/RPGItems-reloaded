@@ -950,7 +950,7 @@ public class RPGItem {
         return armour;
     }
 
-    public void setArmour(int a) {
+    public void setArmour(double a) {
         setArmour(a, true);
     }
 

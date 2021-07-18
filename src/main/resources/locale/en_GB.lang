@@ -203,7 +203,7 @@ command.rpgitem.wgcustomflag=Toggles worldguard custom flag support. If enabled,
 command.rpgitem.throw=Adds the throw power to @[Item]\# with a cooldown of @[Cooldown]\# ticks. The tooltip will display @[Display]\#. The item will throw entity @[Entity]\# with @[EntityData]\# and @[Speed]\# on @[left,right]\# click.
 command.rpgitem.repair=Adds the repair power to @[Item]\#.
 
-message.armour.get=Item '%s' armour is '%d%%'
+message.armour.get=Item '%s' armour is '%f%%'
 message.armour.set=Item '%s' armour set to '%d%%'
 message.color.next=%sChanged paint\!
 message.command.info=More detailed help on http\://rpgitems2.webs.com/ or /rpgitem help [terms]

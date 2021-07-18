@@ -294,10 +294,10 @@ public class Handler implements CommandHandler {
         sender.sendMessage(ChatColor.AQUA + String.format(Locale.get("message.armour.get"), item.getName(), item.getArmour()));
     }
 
-    @CommandString("rpgitem $n[] armour $armour:i[0,100]")
+    @CommandString("rpgitem $n[] armour $armour:f[]")
     @CommandDocumentation("$command.rpgitem.armour.set")
     @CommandGroup("item_armour")
-    public void setItemArmour(CommandSender sender, RPGItem item, int armour) {
+    public void setItemArmour(CommandSender sender, RPGItem item, double armour) {
         item.setArmour(armour);
         sender.sendMessage(ChatColor.AQUA + String.format(Locale.get("message.armour.set"), item.getName(), item.getArmour()));
         ItemManager.save(Plugin.plugin);
