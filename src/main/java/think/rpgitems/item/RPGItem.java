@@ -100,7 +100,7 @@ public class RPGItem {
     private String displayName;
     private Quality quality = Quality.TRASH;
     private int damageMin = 0, damageMax = 3;
-    private int armour = 0;
+    private double armour = 0;
     private String loreText = "";
     private String type = Plugin.plugin.getConfig().getString("defaults.sword", "Sword");
     private String hand = Plugin.plugin.getConfig().getString("defaults.hand", "One handed");
@@ -157,7 +157,7 @@ public class RPGItem {
         quality = Quality.valueOf(s.getString("quality"));
         damageMin = s.getInt("damageMin");
         damageMax = s.getInt("damageMax");
-        armour = s.getInt("armour", 0);
+        armour = s.getDouble("armour");
         item = new ItemStack(Material.valueOf(s.getString("item")));
         ItemMeta meta = item.getItemMeta();
         if (meta instanceof LeatherArmorMeta) {
@@ -940,13 +940,13 @@ public class RPGItem {
         return true;
     }
 
-    public void setArmour(int a, boolean update) {
+    public void setArmour(double a, boolean update) {
         armour = a;
         if (update)
             rebuild();
     }
 
-    public int getArmour() {
+    public double getArmour() {
         return armour;
     }
 

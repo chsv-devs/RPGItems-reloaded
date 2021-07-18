@@ -608,7 +608,7 @@ public class Events implements Listener {
                 can = pRItem.consumeDurability(pArmour, (int) (pRItem.hitCost * damage / 100d));
             }
             if (can && pRItem.getArmour() > 0) {
-                damage -= Math.round(damage * (((double) pRItem.getArmour()) / 100d));
+                damage -= damage * (pRItem.getArmour() / 100d);
             }
         }
         if (hasRPGItem) {
